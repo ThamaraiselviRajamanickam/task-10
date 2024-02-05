@@ -1,0 +1,21 @@
+
+.one{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: lightskyblue;
+    width: 468px;
+    height: 310px;
+    border: dashed;
+    margin: 100px;
+    
+    
+}
+button{
+    color: black;
+    background-color: rgb(18, 218, 208);
+    border-radius: 25px;
+    height: 30px;
+    width: 80px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Switch</title>
+  <style>
+    /* Basic styling for the switch label */
+    .switch-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .switch-label {
+      margin-right: 10px;
+    }
+
+    /* Styling for the switch itself */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+
+    /* Styling for the switch slider */
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      border-radius: 34px;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    /* Styling for the switch slider when it's on */
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      border-radius: 50%;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    /* Styling for the switch input when it's checked (on) */
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+
+    /* Styling for the switch slider when it's on */
+    input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+  </style>
+</head>
+<body>
+
+<h2>Simple Switch</h2>
+
+<div class="switch-container">
+  <span class="switch-label">Switch:<br><label id="state"></label></span>
+  <label class="switch">
+    <input type="checkbox" id="mySwitch" onchange="toggleSwitch()">
+    <span class="slider"></span>
+  </label>
+</div>
+
+<script>
+  // JavaScript to toggle switch state
+  function toggleSwitch() {
+    const switchInput = document.getElementById('mySwitch');
+    const labelState=document.getElementById("state")
+    const switchState = switchInput.checked ? 'ON' : 'OFF';
+    labelState.innerHTML=switchState;
+  }
+</script>
+
+</body>
+</html>

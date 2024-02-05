@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="box1" placeholder="Enter here">
+    <ul id="list">
+        <li>hello</li>
+    </ul>
+    <button onclick="add()">ADD</button>
+    <button onclick="showValues()">Show</button>
+    <button onclick="clearValues()">Clear</button>
+
+    <script>
+        var inBox1 = document.getElementById("box1");
+        var list = document.getElementById("list");
+        function add() {
+            var listAdd = document.createElement("li");
+            var addIn = inBox1.value;
+            listAdd.innerHTML = addIn;
+            list.append(listAdd);
+            localStorage.setItem("addInValue", list.innerText);
+        }
+        function showValues() {
+            var values = localStorage.getItem("addInValue");
+            alert(values);
+        }
+
+        function clearValues() {
+            localStorage.clear           ();
+        }
+
+    </script>
+</body>
+
+</html>
