@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.one{
+    width: 500px;
+    height: 200px;
+    background-color: black;
+    border-radius: 30% solid;
+    color: white;
+    text-align: center;
+    margin: 50px;
+}
+button{
+    height: 40px;
+    width: 70px;
+    
+}

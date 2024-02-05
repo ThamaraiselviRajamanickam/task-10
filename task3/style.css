@@ -1,0 +1,14 @@
+.one{
+    height: 400px;
+    width: 400px;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+   text-align: center;
+   margin-top: 20px;
+}
+.two{
+    margin-top: 61px;
+    display: inline-block;
+}
+

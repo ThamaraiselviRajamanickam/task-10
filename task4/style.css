@@ -1,0 +1,14 @@
+body{
+    background-color: rgba(0.1, 0, 0, 0.1);
+}
+
+
+button{
+    height: 40px;
+    width: 150px;
+    background-color: black;
+    color: white;
+    margin: 200px;
+    border-radius: 25px;
+    
+}
